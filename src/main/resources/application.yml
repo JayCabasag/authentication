@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:32769/user_authentication
+    username: postgres
+    password: postgrespw
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+      format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+application:
+  security:
+    jwt:
+      secret-key: 6251655468576D5A7134743777217A25432A46294A404E635266556A586E3272
+      expiration: 60000 # 1 minute
+      refresh-token:
+        expiration: 604800000 # 7 days
